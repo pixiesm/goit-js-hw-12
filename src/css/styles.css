@@ -57,10 +57,13 @@ ol {
 }
 
 .gallery-list {
+  /* padding: auto; */
   display: flex;
   flex-wrap: wrap;
   row-gap: 24px;
   column-gap: 24px;
+  margin-left: 156px;
+  margin-right: 156px;
 }
 .gallery-item {
   border-bottom: 1px solid #808080;
@@ -87,6 +90,26 @@ ol {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #2e2f42;
+}
+
+.load-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 125px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  margin: 0, auto;
 }
 
 /* css loader */
