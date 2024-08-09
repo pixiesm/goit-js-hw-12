@@ -13,8 +13,9 @@ export async function getImage(image, currentPage) {
         image_type: 'photo',
         orientation: 'horizontal',
         safesearch: true,
-        page: currentPage,
         per_page: 15,
+        page: currentPage,
+       
     };
 
     // const url = `${URL}?${params}`;
