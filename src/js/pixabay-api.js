@@ -30,7 +30,7 @@ export async function getImage(image, currentPage) {
     // }).catch((error) => {
     //     iziToast.error({
     //       position: "topRight",
-    //         message: `${error}`,
+    //         message: `${error}`, 
     //     });
     //   });
         
