@@ -68,9 +68,11 @@ showLoader()
             position: 'topRight',
             displayMode: 'once',
         });
-            updateBtnStatus();
-            resetForm();
-            return;    }
+            
+            return;
+        }
+        updateBtnStatus();
+         resetForm();
     }
     catch {
         iziToast.error({
@@ -79,17 +81,25 @@ showLoader()
         });
 }
   
-    resetForm();      
+    // resetForm();      
 });
 
 refs.loadBtn.addEventListener('click', async () => {
     currentPage++;
     hideLoadBtn();
     showLoader2();
-    const data = await getImage(photosName, currentPage);
-    hideLoader2();
-    markupImages(data.hits);
-    updateBtnStatus();
+    try {
+        const data = await getImage(photosName, currentPage);
+        hideLoader2();
+        markupImages(data.hits);
+
+         
+   
+    }
+    catch { iziToast.error({title: 'Error'})}
+    hideLoader2(); 
+     skipElements();
+   updateBtnStatus();
 
 
 
@@ -131,3 +141,12 @@ function updateBtnStatus() {
 
 // })
 function resetForm() { refs.searchForm.reset(); }
+function skipElements() {
+    
+    const liElem = refs.picturesList.children[0];
+    const height = liElem.getBoundingClientRect().height;
+
+    scrollBy({
+        top: height,
+    behavior: 'smooth',})
+}
