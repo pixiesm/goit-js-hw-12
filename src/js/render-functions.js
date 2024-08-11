@@ -9,10 +9,7 @@ const lightbox = new SimpleLightbox('.gallery-list a', {
 });
 
 
- const refs = { input: document.querySelector('.form-input'),
-    searchForm: document.querySelector('.search-form'),
-    picturesList: document.querySelector('.gallery-list'),
-};
+const picturesList = document.querySelector('.gallery-list');
 
 export function markupImages(images) { 
     const markup = images.map(image => {
@@ -32,7 +29,7 @@ export function markupImages(images) {
       </div>
     </li>`;
     }).join('');
-  refs.picturesList.insertAdjacentHTML('beforeend', markup);
+  picturesList.insertAdjacentHTML('beforeend', markup);
   lightbox.refresh();
  
 }
