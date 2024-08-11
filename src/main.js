@@ -15,7 +15,7 @@ import {
 
 
 
-export const refs = { input: document.querySelector('.form-input'),
+ const refs = { input: document.querySelector('.form-input'),
 btn: document.querySelector('.search-btn'),
     searchForm: document.querySelector('.search-form'),
     picturesList: document.querySelector('.gallery-list'),

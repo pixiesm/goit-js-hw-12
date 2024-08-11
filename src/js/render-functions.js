@@ -1,6 +1,6 @@
 // функцііїдля відображення
 
-import { refs } from "../main";
+
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 const lightbox = new SimpleLightbox('.gallery-list a', {
@@ -8,6 +8,11 @@ const lightbox = new SimpleLightbox('.gallery-list a', {
     captionsDelay: 250,
 });
 
+
+ const refs = { input: document.querySelector('.form-input'),
+    searchForm: document.querySelector('.search-form'),
+    picturesList: document.querySelector('.gallery-list'),
+};
 
 export function markupImages(images) { 
     const markup = images.map(image => {
